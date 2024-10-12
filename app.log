@@ -1,0 +1,37 @@
+2024-10-12 16:26:19 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-12 16:26:19 INFO: [33mPress CTRL+C to quit[0m
+2024-10-12 16:26:40 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-12 16:26:40 INFO: [33mPress CTRL+C to quit[0m
+2024-10-12 16:26:40 INFO:  * Restarting with watchdog (windowsapi)
+2024-10-12 16:26:43 WARNING:  * Debugger is active!
+2024-10-12 16:26:43 INFO:  * Debugger PIN: 789-582-172
+2024-10-12 16:28:01 INFO: 127.0.0.1 - - [12/Oct/2024 16:28:01] "OPTIONS /predict/personal HTTP/1.1" 200 -
+2024-10-12 16:28:01 INFO: Received personal prediction request with features: {'Gender': 0, 'Customer Type': 'First TIme', 'Age': '30', 'Type of Travel': 'Business', 'Class': 'Economy', 'Flight Distance': '1000', 'Departure Delay': '0', 'Arrival Delay': '0', 'Departure and Arrival Time Convenience': '5', 'On-board Service': '5', 'Seat Comfort': '5', 'Leg Room Service': '5', 'Cleanliness': '5', 'Food and Drink': '5', 'In-flight Service': '5', 'In-flight Wifi Service': '5', 'In-flight Entertainment': '5', 'Baggage Handling': '5'}
+2024-10-12 16:28:01 INFO: Preprocessing features: {'Gender': 0, 'Customer Type': 'First TIme', 'Age': '30', 'Type of Travel': 'Business', 'Class': 'Economy', 'Flight Distance': '1000', 'Departure Delay': '0', 'Arrival Delay': '0', 'Departure and Arrival Time Convenience': '5', 'On-board Service': '5', 'Seat Comfort': '5', 'Leg Room Service': '5', 'Cleanliness': '5', 'Food and Drink': '5', 'In-flight Service': '5', 'In-flight Wifi Service': '5', 'In-flight Entertainment': '5', 'Baggage Handling': '5'}
+2024-10-12 16:28:01 INFO: Transformed feature Gender: 0
+2024-10-12 16:28:01 ERROR: Error transforming feature Customer Type: invalid literal for int() with base 10: 'First TIme'
+2024-10-12 16:28:01 ERROR: Error in predict_personal: invalid literal for int() with base 10: 'First TIme'
+2024-10-12 16:28:01 INFO: 127.0.0.1 - - [12/Oct/2024 16:28:01] "[31m[1mPOST /predict/personal HTTP/1.1[0m" 400 -
+2024-10-12 16:28:32 INFO: 127.0.0.1 - - [12/Oct/2024 16:28:32] "OPTIONS /predict/personal HTTP/1.1" 200 -
+2024-10-12 16:28:33 INFO: Received personal prediction request with features: {'Gender': 0, 'Customer Type': 'First Time', 'Age': '30', 'Type of Travel': 'Business', 'Class': 'Economy', 'Flight Distance': '1000', 'Departure Delay': '0', 'Arrival Delay': '0', 'Departure and Arrival Time Convenience': '5', 'On-board Service': '5', 'Seat Comfort': '5', 'Leg Room Service': '5', 'Cleanliness': '5', 'Food and Drink': '5', 'In-flight Service': '5', 'In-flight Wifi Service': '5', 'In-flight Entertainment': '5', 'Baggage Handling': '5'}
+2024-10-12 16:28:33 INFO: Preprocessing features: {'Gender': 0, 'Customer Type': 'First Time', 'Age': '30', 'Type of Travel': 'Business', 'Class': 'Economy', 'Flight Distance': '1000', 'Departure Delay': '0', 'Arrival Delay': '0', 'Departure and Arrival Time Convenience': '5', 'On-board Service': '5', 'Seat Comfort': '5', 'Leg Room Service': '5', 'Cleanliness': '5', 'Food and Drink': '5', 'In-flight Service': '5', 'In-flight Wifi Service': '5', 'In-flight Entertainment': '5', 'Baggage Handling': '5'}
+2024-10-12 16:28:33 INFO: Transformed feature Gender: 0
+2024-10-12 16:28:33 ERROR: Error transforming feature Customer Type: invalid literal for int() with base 10: 'First Time'
+2024-10-12 16:28:33 ERROR: Error in predict_personal: invalid literal for int() with base 10: 'First Time'
+2024-10-12 16:28:33 INFO: 127.0.0.1 - - [12/Oct/2024 16:28:33] "[31m[1mPOST /predict/personal HTTP/1.1[0m" 400 -
+2024-10-12 16:28:33 INFO: Received personal prediction request with features: {'Gender': 0, 'Customer Type': 'First Time', 'Age': '30', 'Type of Travel': 'Business', 'Class': 'Economy', 'Flight Distance': '1000', 'Departure Delay': '0', 'Arrival Delay': '0', 'Departure and Arrival Time Convenience': '5', 'On-board Service': '5', 'Seat Comfort': '5', 'Leg Room Service': '5', 'Cleanliness': '5', 'Food and Drink': '5', 'In-flight Service': '5', 'In-flight Wifi Service': '5', 'In-flight Entertainment': '5', 'Baggage Handling': '5'}
+2024-10-12 16:28:33 INFO: Preprocessing features: {'Gender': 0, 'Customer Type': 'First Time', 'Age': '30', 'Type of Travel': 'Business', 'Class': 'Economy', 'Flight Distance': '1000', 'Departure Delay': '0', 'Arrival Delay': '0', 'Departure and Arrival Time Convenience': '5', 'On-board Service': '5', 'Seat Comfort': '5', 'Leg Room Service': '5', 'Cleanliness': '5', 'Food and Drink': '5', 'In-flight Service': '5', 'In-flight Wifi Service': '5', 'In-flight Entertainment': '5', 'Baggage Handling': '5'}
+2024-10-12 16:28:33 INFO: Transformed feature Gender: 0
+2024-10-12 16:28:33 ERROR: Error transforming feature Customer Type: invalid literal for int() with base 10: 'First Time'
+2024-10-12 16:28:33 ERROR: Error in predict_personal: invalid literal for int() with base 10: 'First Time'
+2024-10-12 16:28:33 INFO: 127.0.0.1 - - [12/Oct/2024 16:28:33] "[31m[1mPOST /predict/personal HTTP/1.1[0m" 400 -
+2024-10-12 16:42:37 INFO:  * Detected change in 'C:\\Users\\Dishant\\Desktop\\Semester 7\\BDA\\mini_project\\Backend\\app.py', reloading
+2024-10-12 16:42:37 INFO:  * Detected change in 'C:\\Users\\Dishant\\Desktop\\Semester 7\\BDA\\mini_project\\Backend\\app.py', reloading
+2024-10-12 16:42:37 INFO:  * Detected change in 'C:\\Users\\Dishant\\Desktop\\Semester 7\\BDA\\mini_project\\Backend\\app.py', reloading
+2024-10-12 16:42:37 INFO:  * Detected change in 'C:\\Users\\Dishant\\Desktop\\Semester 7\\BDA\\mini_project\\Backend\\app.py', reloading
+2024-10-12 16:42:38 INFO:  * Restarting with watchdog (windowsapi)
+2024-10-12 16:52:06 INFO:  * Restarting with watchdog (windowsapi)
+2024-10-12 16:53:58 INFO:  * Restarting with watchdog (windowsapi)
+2024-10-12 16:54:27 INFO:  * Restarting with watchdog (windowsapi)
