@@ -1,28 +1,37 @@
 from flask import Flask, request, jsonify
 import pickle
 import numpy as np
+import os
 import pandas as pd
 from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
 
-# Load models, encoders, and scalers
-business_model = pickle.load(open('models/business_model.pkl', 'rb'))
-personal_model = pickle.load(open('models/personal_model.pkl', 'rb'))
+# Define the models directory
+models_dir = os.path.join(os.path.dirname(__file__), 'models')
 
-business_scaler = pickle.load(open('models/business_scaler.pkl', 'rb'))
-personal_scaler = pickle.load(open('models/personal_scaler.pkl', 'rb'))
+# Helper function to load a pickle file
+def load_pickle(filename):
+    return pickle.load(open(os.path.join(models_dir, filename), 'rb'))
 
-# Load encoders for business
-business_encoders = {}
-for feature in ['Gender', 'Customer Type', 'Type of Travel', 'Class']:
-    business_encoders[feature] = pickle.load(open(f'models/business_{feature}_encoder.pkl', 'rb'))
+# Load models
+business_model = load_pickle('business_model.pkl')
+personal_model = load_pickle('personal_model.pkl')
 
-# Load encoders for personal
-personal_encoders = {}
-for feature in ['Gender', 'Customer Type', 'Type of Travel', 'Class']:
-    personal_encoders[feature] = pickle.load(open(f'models/personal_{feature}_encoder.pkl', 'rb'))
+# Load scalers
+business_scaler = load_pickle('business_scaler.pkl')
+personal_scaler = load_pickle('personal_scaler.pkl')
+
+# Load encoders for business and personal
+def load_encoders(prefix):
+    encoders = {}
+    for feature in ['Gender', 'Customer Type', 'Type of Travel', 'Class']:
+        encoders[feature] = load_pickle(f'{prefix}_{feature}_encoder.pkl')
+    return encoders
+
+business_encoders = load_encoders('business')
+personal_encoders = load_encoders('personal')
 
 # Preprocessing function for business model
 def preprocess_business_features(features):
